@@ -1,0 +1,20 @@
+<div class="modal-overlay">
+  <div class="modal">
+    <form (ngSubmit)="onSubmit()" autocomplete="off">
+      <label>Name:</label><input [(ngModel)]="profile.name" name="name" required>
+      <label>Description:</label><input [(ngModel)]="profile.description" name="description" required>
+      <label>Interests:</label><input [(ngModel)]="profile.interests" name="interests">
+      <label>Address:</label><input [(ngModel)]="profile.address" name="address" required>
+      <label>City:</label><input [(ngModel)]="profile.city" name="city" required>
+      <label>State:</label><input [(ngModel)]="profile.state" name="state" required>
+      <label>Country:</label><input [(ngModel)]="profile.country" name="country" required>
+      <label>Postal Code:</label><input [(ngModel)]="profile.code" name="code" required>
+      <label>Longitude:</label><input [(ngModel)]="profile.longitude" name="longitude" type="number" required>
+      <label>Latitude:</label><input [(ngModel)]="profile.latitude" name="latitude" type="number" required>
+      <!-- <label>Photo (Base64):</label><input [(ngModel)]="profile.photo" name="photo">  -->
+      <label>Photo:</label><input type="file" (change)="onFileSelected($event)" [(ngModel)]="profile.photo" name="photo"/>
+      <button type="submit" >Save Profile</button>   
+    </form>
+    <button (click)="cancelForm()">Cancel</button>   
+  </div>
+</div>
