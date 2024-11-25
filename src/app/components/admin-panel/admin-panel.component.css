@@ -1,0 +1,57 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2px;
+  }
+  
+  button {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: solid 1px var(--primary-color);
+    border-radius: 5px;
+ 
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  button:hover {
+    background-color: #d70f63;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 0px;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 1px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  table td img {
+    border-radius: 50%;
+  }
+  
+  .create-profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  

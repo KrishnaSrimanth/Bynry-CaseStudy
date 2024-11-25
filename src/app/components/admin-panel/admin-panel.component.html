@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="create-profile-section">
+      <button (click)="toggleCreateProfile()">{{ showProfileDetails ? 'Cancel' : 'Create New Profile' }}</button>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Interests</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Country</th>
+          <th>PostalCode</th>
+          <th>Longitude</th>
+          <th>Latitude</th>
+          <th>Photo</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let profile of profilesList">
+          <td>{{ profile.name }}</td>
+          <td>{{ profile.description }}</td>
+          <td>{{ profile.interests }}</td>
+          <td>{{ profile.address }}</td>
+          <td>{{ profile.city }}</td>
+          <td>{{ profile.state }}</td>
+          <td>{{ profile.country }}</td>
+          <td>{{ profile.code }}</td>
+          <td>{{ profile.longitude }}</td>
+          <td>{{ profile.latitude }}</td>
+          <td><img [src]="profile.photo" alt="profile photo" width="50" height="50"></td>
+          <td>
+            <button (click)="editProfile(profile)">Edit</button>
+            <button (click)="deleteProfile(profile)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <app-admin-details-panel id="detPanel"
+    *ngIf="showProfileDetails" 
+    [profile]="selectedProfile" 
+    (createProfile)="createProfile($event)" 
+    (updateProfile)="updateProfile($event)"
+    (cancel)="toggleCreateProfile()">
+  </app-admin-details-panel>
+  

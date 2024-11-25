@@ -1,0 +1,46 @@
+
+  /* profile card style */
+  .profile-card {
+    background: var(--accent-color);
+    border-radius: 5px;
+    padding-bottom: 10px;
+    border: 1px solid #ddd;
+    width: 300px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* profile photo style */
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  /* Container for profile details */
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* profile name styling */
+  .profile-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* profile address styling */
+  .profile-address {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+
+  

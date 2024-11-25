@@ -1,0 +1,14 @@
+<section>
+    <form>
+      <input type="text" placeholder="Filter by Name" #filter />
+      <button class="primary" type="button" (click)="filterResults(filter.value)" >Search</button>
+    </form>
+    <section class="results">
+      <app-profile *ngFor="let profile of filteredProfileList" [profile]="profile"></app-profile>
+    </section>
+    <section>
+      <div  class="allUserMap">
+        <app-map [mapMarkers]="profileMapMarkers"></app-map>
+      </div>
+    </section>
+</section>

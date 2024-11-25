@@ -1,0 +1,13 @@
+<section class="profile-card">
+    <img
+      class="profile-photo"
+      [src]="profile.photo"
+      alt="photo of {{ profile.name }}"
+    />
+    <div class="profile-details">
+      <h3 class="profile-name">{{ profile.name }}</h3>
+      <p class="profile-location">{{ profile.city }}, {{ profile.state }}</p>
+      <a [routerLink]="['/details', profile.id]">Summary</a>
+    </div>
+
+  </section>
